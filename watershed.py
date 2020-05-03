@@ -24,10 +24,10 @@ def mouse_callback(event, x, y, flags, param):
         print(current_marker)
 
         # TRACKING FOR MARKERS
-        cv2.circle(marker_image, (x, y), 10, (current_marker), -1)
+        cv2.circle(marker_image, (x, y), 5, (current_marker), -1)
 
         # DISPLAY ON USER IMAGE
-        cv2.circle(img_copy, (x, y), 10, colors[current_marker], -1)
+        cv2.circle(img_copy, (x, y), 5, colors[current_marker], -1)
         marks_updated = True
 
 '''
@@ -97,7 +97,7 @@ if __name__ == '__main__':
     img = load_image(path, toRGB=False)
 
     # Resize image
-    img = resize_image(img, preserveAspect=True, scale=0.8)
+    img = resize_image(img, preserveAspect=True, scale=0.7)
 
     # Manip on image copy
     img_copy = img.copy()
